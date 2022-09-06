@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
-	xmlns:content="http://purl.org/rss/1.0/modules/content/"
-	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
-	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:atom="http://www.w3.org/2005/Atom"
-	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
-	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	xmlns:content="https://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="https://wellformedweb.org/CommentAPI/"
+	xmlns:dc="https://purl.org/dc/elements/1.1/"
+	xmlns:atom="https://www.w3.org/2005/Atom"
+	xmlns:sy="https://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="https://purl.org/rss/1.0/modules/slash/"
 	>
 
 <channel>
@@ -49,7 +49,7 @@
 		<category><![CDATA[xamarin.android]]></category>
 		<category><![CDATA[xamarin.forms]]></category>
 		<category><![CDATA[xamarin.ios]]></category>
-		<guid isPermaLink="false">http://www.patridgedev.com/?p=436</guid>
+		<guid isPermaLink="false">https://www.patridgedev.com/?p=436</guid>
 
 					<description><![CDATA[Sometimes, your app uses tabs to separate different user activities. Sometimes, though, those activities aren&#8217;t completely independent. When that happens, you need an action in one tab to cause the user to switch to another tab. I&#8217;ll show you how to do that in code using Xamarin.Forms. In case you haven&#8217;t already started your tabs, we&#8217;ll start from the beginning. (Note: while the UI parts can be done quite well in XAML, this post will do it all in code.) First, Some Tabs Just in case you haven&#8217;t already made your Xamarin.Forms tab system, we&#8217;ll start there. This is as simple as using an instance of TabbedPage. Since we will want a little more control over things going forward, let&#8217;s create a subclass inheriting from it. public class MainTabbedPage : TabbedPage { public MainTabbedPage() { Children.Add(new somePage()); Children.Add(new someOtherPage()); } } You simply make this the MainPage in your App, now, and you get tabs. public class App : Application { public App() { MainPage = new MainTabbedPage(); } } If you run your app at this point, though, you&#8217;ll notice something fairly obvious missing from your tabs. No titles, no icons. In fact, on iOS, you can&#8217;t even tell... <a class="continue-reading-link" href="https://www.patridgedev.com/2015/03/07/xamarin-forms-switching-tabbedpage-tabs-programmatically/"> Continue reading <span class="meta-nav">&#8594; </span></a>]]></description>
 		

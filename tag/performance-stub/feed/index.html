@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
-	xmlns:content="http://purl.org/rss/1.0/modules/content/"
-	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
-	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:atom="http://www.w3.org/2005/Atom"
-	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
-	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	xmlns:content="https://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="https://wellformedweb.org/CommentAPI/"
+	xmlns:dc="https://purl.org/dc/elements/1.1/"
+	xmlns:atom="https://www.w3.org/2005/Atom"
+	xmlns:sy="https://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="https://purl.org/rss/1.0/modules/slash/"
 	>
 
 <channel>
@@ -30,7 +30,7 @@
 		<category><![CDATA[c#]]></category>
 		<category><![CDATA[performance]]></category>
 		<category><![CDATA[performance stub]]></category>
-		<guid isPermaLink="false">http://www.patridgedev.com/?p=161</guid>
+		<guid isPermaLink="false">https://www.patridgedev.com/?p=161</guid>
 
 					<description><![CDATA[Performance Stubs These blog posts are simply times I wanted to identify the fastest method for accomplishing a particular goal. As I write the code, I like to make some light notes of alternatives while driving forward with the first implementation that makes it from my brain to my fingers. When I get the chance, I can go back and flesh out the two versions and drop them into some basic Stopwatch timing to determine which is better in terms of raw speed. Factoring those results with clarity of code, I have a method I will likely choose the next time I need the same feature. Goal Given a particular IEnumerable, find all the elements that are of a particular type (subclass, in this case). Method 1: Select As, Where Not Null The as operator with convert between two types with one nice tweak. If the cast cannot happen, it results in null. In this version, we massage the list by hitting all items with an as cast and then filter out the ones that didn&#8217;t cast successfully. public static IEnumerable&#60;SubSomething&#62; SelectAsWhereNotNull(IEnumerable&#60;Something&#62; source) { return source.Select(item =&#62; item as SubSomething).Where(item =&#62; item != null); } Method 2: Where Is, Cast... <a class="continue-reading-link" href="https://www.patridgedev.com/2012/04/11/performance-stub-getting-all-subtype-items-from-a-list/"> Continue reading <span class="meta-nav">&#8594; </span></a>]]></description>
 		

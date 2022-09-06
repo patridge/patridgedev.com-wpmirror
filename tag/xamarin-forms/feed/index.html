@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
-	xmlns:content="http://purl.org/rss/1.0/modules/content/"
-	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
-	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:atom="http://www.w3.org/2005/Atom"
-	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
-	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	xmlns:content="https://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="https://wellformedweb.org/CommentAPI/"
+	xmlns:dc="https://purl.org/dc/elements/1.1/"
+	xmlns:atom="https://www.w3.org/2005/Atom"
+	xmlns:sy="https://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="https://purl.org/rss/1.0/modules/slash/"
 	>
 
 <channel>
@@ -47,7 +47,7 @@
 		<pubDate>Thu, 17 Mar 2016 13:15:27 +0000</pubDate>
 				<category><![CDATA[dev]]></category>
 		<category><![CDATA[xamarin.forms]]></category>
-		<guid isPermaLink="false">http://www.patridgedev.com/?p=516</guid>
+		<guid isPermaLink="false">https://www.patridgedev.com/?p=516</guid>
 
 					<description><![CDATA[For the last four months, I&#8217;ve been working on a fast-paced Xamarin.Forms project where almost every image used has been an SVG shared between both the iOS and the Android platform apps. And it has been glorious! If an early UI design needed a few pixels shaved or added to an image we were using, no new images were needed, let alone a handful of pixel-density variations on it. It was just the few lines of code or XAML to change the rendered size. (In fact, I&#8217;ve extended our use to include stretchable buttons by adding 9-slice SVG support.) With SVGs, you use one tiny XML file to render the resulting image at any size or for any screen density. TL;DR Put SVGs in a PCL as an EmbeddedResource build action Use an SVG control (I recommend TwinTechsForms.NControl.SvgImageView, but there are other choices.) Add an SvgImageView to your C# or XAML UI the the right assembly and resource path Without SVG Images Images on iOS and Android are normally managed in slightly different ways regarding naming and location. For better or worse, Xamarin.Forms continues using these image conventions, making a detour from the focus on cross-platform sharing. On a normal... <a class="continue-reading-link" href="https://www.patridgedev.com/2016/03/17/cross-platform-images-in-xamarin-forms-using-svgs/"> Continue reading <span class="meta-nav">&#8594; </span></a>]]></description>
 		
@@ -65,7 +65,7 @@
 		<pubDate>Tue, 23 Feb 2016 14:10:21 +0000</pubDate>
 				<category><![CDATA[dev]]></category>
 		<category><![CDATA[xamarin.forms]]></category>
-		<guid isPermaLink="false">http://www.patridgedev.com/?p=508</guid>
+		<guid isPermaLink="false">https://www.patridgedev.com/?p=508</guid>
 
 					<description><![CDATA[There comes a time in cross-platform development where you inevitably long for a simpler mechanism for dealing with the deluge of image assets. You end up with three or more sizes of every single image with different names for every platform. At Twin, SVGs have risen to that challenge for us, and we use it everywhere we can with a custom variant of Paul Patarinski&#8217;s SvgImage control. After some minimal setup work to start using them, they render crisply at any size and resolution we throw at them. One place that SVG use has had shortcomings for us is when we needed backgrounds with varying sizes. We need a unique SVGs for each size we intend to use because you haven&#8217;t been able to selectively stretch an SVG like you could with 9-patch images on Android or StretchableImage/CreateResizableImage on iOS. In SVG terms, this appears to be called 9-slice support, and it is something we want to both use in our apps as well as make available to you. I recently took an experimental journey toward bringing 9-slice support to SVGs drawn in cross-platform Xamarin.Forms apps. Read the full 9-Slice SVG article over at Twin Technologies blog.]]></description>
 		
@@ -84,7 +84,7 @@
 				<category><![CDATA[dev]]></category>
 		<category><![CDATA[cocossharp]]></category>
 		<category><![CDATA[xamarin.forms]]></category>
-		<guid isPermaLink="false">http://www.patridgedev.com/?p=485</guid>
+		<guid isPermaLink="false">https://www.patridgedev.com/?p=485</guid>
 
 					<description><![CDATA[If you didn&#8217;t see the announcement recently, the awesome people working on CocosSharp put out a new preview of CocosSharp v1.7 (v1.7.0.0-pre1). With it, comes a very cool new way of working with your game content, the ability to mix it with normal native Xamarin.iOS, Xamarin.Android, or Xamarin.Forms content. I wanted to poke at the last of those, because I&#8217;ve been buried in Xamarin.Forms code non-stop for quite a few months now. TL;DR: Getting the CocosSharp project templates working the the v1.7.0.0-pre1 packages takes a few extra steps: restoring the pre-release CocosSharp.Forms NuGet package on your shared and platform projects. Once you get things in place, though, you can do some amazing things by combining Xamarin.Forms content with your CocosSharp game content. If you want to just jump right into playing with the final code, the resulting solution is available in a GitHub repo. (I may continue to work on this repo, so if it ever looks too different, here is the exact commit to clone to get you to the end of this post.) CocosSharp Project Templates Add-in While we can spin up a new Xamarin.Forms project and add the CocosSharp bits, this also gives us a chance to... <a class="continue-reading-link" href="https://www.patridgedev.com/2015/11/17/giving-the-cocossharp-v1-7-0-0-pre1-a-spin/"> Continue reading <span class="meta-nav">&#8594; </span></a>]]></description>
 		
@@ -104,7 +104,7 @@
 		<category><![CDATA[xamarin.android]]></category>
 		<category><![CDATA[xamarin.forms]]></category>
 		<category><![CDATA[xamarin.ios]]></category>
-		<guid isPermaLink="false">http://www.patridgedev.com/?p=436</guid>
+		<guid isPermaLink="false">https://www.patridgedev.com/?p=436</guid>
 
 					<description><![CDATA[Sometimes, your app uses tabs to separate different user activities. Sometimes, though, those activities aren&#8217;t completely independent. When that happens, you need an action in one tab to cause the user to switch to another tab. I&#8217;ll show you how to do that in code using Xamarin.Forms. In case you haven&#8217;t already started your tabs, we&#8217;ll start from the beginning. (Note: while the UI parts can be done quite well in XAML, this post will do it all in code.) First, Some Tabs Just in case you haven&#8217;t already made your Xamarin.Forms tab system, we&#8217;ll start there. This is as simple as using an instance of TabbedPage. Since we will want a little more control over things going forward, let&#8217;s create a subclass inheriting from it. public class MainTabbedPage : TabbedPage { public MainTabbedPage() { Children.Add(new somePage()); Children.Add(new someOtherPage()); } } You simply make this the MainPage in your App, now, and you get tabs. public class App : Application { public App() { MainPage = new MainTabbedPage(); } } If you run your app at this point, though, you&#8217;ll notice something fairly obvious missing from your tabs. No titles, no icons. In fact, on iOS, you can&#8217;t even tell... <a class="continue-reading-link" href="https://www.patridgedev.com/2015/03/07/xamarin-forms-switching-tabbedpage-tabs-programmatically/"> Continue reading <span class="meta-nav">&#8594; </span></a>]]></description>
 		

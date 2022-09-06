@@ -104,9 +104,9 @@ window.onload = makeDoubleDelegate(window.onload, mantra_onload );
 /*!
 * FitVids 1.0
 *
-* Copyright 2011, Chris Coyier - http://css-tricks.com + Dave Rupert - http://daverupert.com
-* Credit to Thierry Koblentz - http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/
-* Released under the WTFPL license - http://sam.zoy.org/wtfpl/
+* Copyright 2011, Chris Coyier - https://css-tricks.com + Dave Rupert - https://daverupert.com
+* Credit to Thierry Koblentz - https://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/
+* Released under the WTFPL license - https://sam.zoy.org/wtfpl/
 *
 * Date: Thu Sept 01 18:00:00 2011 -0500
 */
@@ -165,7 +165,7 @@ window.onload = makeDoubleDelegate(window.onload, mantra_onload );
 
 /*!
  * hoverIntent r7 // 2013.03.11 // jQuery 1.9.1+
- * http://cherne.net/brian/resources/jquery.hoverIntent.html
+ * https://cherne.net/brian/resources/jquery.hoverIntent.html
  *
  * You may use hoverIntent under the terms of the MIT license.
  * Copyright 2007, 2013 Brian Cherne

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
-	xmlns:content="http://purl.org/rss/1.0/modules/content/"
-	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
-	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:atom="http://www.w3.org/2005/Atom"
-	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
-	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	xmlns:content="https://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="https://wellformedweb.org/CommentAPI/"
+	xmlns:dc="https://purl.org/dc/elements/1.1/"
+	xmlns:atom="https://www.w3.org/2005/Atom"
+	xmlns:sy="https://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="https://purl.org/rss/1.0/modules/slash/"
 	>
 
 <channel>
@@ -29,7 +29,7 @@
 				<category><![CDATA[dev]]></category>
 		<category><![CDATA[ios]]></category>
 		<category><![CDATA[xamarin.ios]]></category>
-		<guid isPermaLink="false">http://www.patridgedev.com/?p=281</guid>
+		<guid isPermaLink="false">https://www.patridgedev.com/?p=281</guid>
 
 					<description><![CDATA[Showing the coolness of your iOS app in a web format can be very difficult, depending on what about your app makes it shine. If your app thrives on animation, especially the new UIKit Dynamics fun, you will need more than one frame to portray what your app does: enter the animated GIF, mother of all awesomeness. Here is the method I used to make the images for my Xamarin UIGravityBehavior recipe. That said, if you know a better way to do this, toss a comment out there; I&#8217;d love to hear about it. While I use these methods for my Xamarin.iOS creations, they apply equally to native apps and most anything running on a Mac. The Tool: LICEcap While the name sounds slightly&#8230;off, it definitely gets the job done. LICEcap, from Cockos Incorporated, is a quick disk image install. In fact, here&#8217;s LICEcap&#8217;s capture of me installing LICEcap. One thing to notice, these GIFs are not a great way to capture complex color palettes like the gradients in the install image folder. There may be a tool that is better at that, but you will probably compromise file size for fidelity. That install GIF was 81kb. Capturing the iOS... <a class="continue-reading-link" href="https://www.patridgedev.com/2013/09/27/capturing-your-ios-app-in-ios-simulator/"> Continue reading <span class="meta-nav">&#8594; </span></a>]]></description>
 		
@@ -50,7 +50,7 @@
 		<category><![CDATA[ios]]></category>
 		<category><![CDATA[monotouch]]></category>
 		<category><![CDATA[visual studio]]></category>
-		<guid isPermaLink="false">http://www.patridgedev.com/?p=222</guid>
+		<guid isPermaLink="false">https://www.patridgedev.com/?p=222</guid>
 
 					<description><![CDATA[TL;DR Never underestimate the little time sinks of switching between IDEs regularly. To write MonoTouch code in Visual Studio 2010 (debug/deploy still requires MonoDevelop on a Mac), go get VSMonoTouch. If you have any issues getting it going, you may need to toss in some project file tweaks. Set it to not reference mscorlib.dll Set the System.Web.Services reference to version 2.0.5.0 (and likely any others that may conflict with the latest .NET runtime assemblies). Background I&#8217;ve been programming with MonoTouch for a few months now using MonoDevelop. I really enjoy learning new things (even if MonoTouch saved me from learning Objective-C), but switching IDEs always tosses a few kinks in my productivity. I have tweaked a number of key bindings in MonoDevelop to match Visual Studio, some at the cost of my ability to adapt to the Mac&#8217;s defaults that are normally used everywhere. At one point I switched copy and paste to use Ctrl in MonoDevelop, but then I kept screwing up outside of the IDE. Regardless, I have become fairly productive in MonoDevelop from simply adapting to the new system through repetition (often screwing up when I switch back to Windows now). I don&#8217;t really have a problem... <a class="continue-reading-link" href="https://www.patridgedev.com/2012/12/10/monotouch-programming-in-visual-studio/"> Continue reading <span class="meta-nav">&#8594; </span></a>]]></description>
 		
@@ -70,7 +70,7 @@
 		<category><![CDATA[c#]]></category>
 		<category><![CDATA[ios]]></category>
 		<category><![CDATA[monotouch]]></category>
-		<guid isPermaLink="false">http://www.patridgedev.com/?p=213</guid>
+		<guid isPermaLink="false">https://www.patridgedev.com/?p=213</guid>
 
 					<description><![CDATA[Background I&#8217;m well into my first week of building the Sierra Trading Post first iOS app using Xamarin.iOS and it has been a fun ride so far. One of the first things needed was a system for showing a loading image while asynchronously retrieving the final image with a web request. Attempt 1 Xamarin has a recipe for using a UIImageView&#8216;s AnimationImages to make a spinner. UIImageView someImageView = new UIImageView(); someImageView.AnimationImages = new UIImage[] { UIImage.FromBundle("Spinning Circle_1.png"), UIImage.FromBundle("Spinning Circle_2.png"), UIImage.FromBundle("Spinning Circle_3.png"), UIImage.FromBundle("Spinning Circle_4.png"), }; someImageView.AnimationRepeatCount = 0; // Repeat forever. someImageView.AnimationDuration = 1.0; // Every 1s. someImageView.StartAnimating(); It may be possible to make this work, but it wasn&#8217;t quite what I needed. This seems to be more of an image rotation than an animation. As a result, it creates a jerky animation between the various images equally distributed over the AnimationDuration you set. After this, attempts to find some ideas for a better solution lead me to about a hundred lines of code that proved a difficult to consume, involving a CGBitmapContext and CGAffineTransform.MakRotation. (To be fair, this code isn&#8217;t doing something as simple as what I want to do.) Hoping to avoid that, I simply added four more... <a class="continue-reading-link" href="https://www.patridgedev.com/2012/10/05/creating-an-animated-spinner-in-a-monotouch-uiimageview/"> Continue reading <span class="meta-nav">&#8594; </span></a>]]></description>
 		
