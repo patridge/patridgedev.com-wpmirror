@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- Mirrored from www.patridgedev.com/2016/03/17/cross-platform-images-in-xamarin-forms-using-svgs/?replytocom=35 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 17:32:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0, maximum-scale=3.0">
+<link rel="apple-touch-icon" href="../../../../wp-content/themes/mantra_custom/images/favicon/apple-touch-icon.html" />
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="../../../../xmlrpc.php" />
+<title>Cross-Platform Images in Xamarin.Forms Using SVGs &#8211; PatridgeDev</title>
+<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="PatridgeDev &raquo; Feed" href="../../../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="PatridgeDev &raquo; Comments Feed" href="../../../../comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="PatridgeDev &raquo; Cross-Platform Images in Xamarin.Forms Using SVGs Comments Feed" href="feed/index.html" />
+		<!-- This site uses the Google Analytics by MonsterInsights plugin v8.5.2 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+							<script src="http://www.googletagmanager.com/gtag/js?id=UA-24616833-1"  data-cfasync="false" data-wpfc-render="false" type="text/javascript" async></script>
+			<script data-cfasync="false" data-wpfc-render="false" type="text/javascript">
+				var mi_version = '8.5.2';
+				var mi_track_user = true;
+				var mi_no_track_reason = '';
+				
+								var disableStrs = [
+										'ga-disable-G-3WN7RP75N7',
+															'ga-disable-UA-24616833-1',
+									];
+
+				/* Function to detect opted out users */
+				function __gtagTrackerIsOptedOut() {
+					for ( var index = 0; index < disableStrs.length; index++ ) {
+						if ( document.cookie.indexOf( disableStrs[ index ] + '=true' ) > -1 ) {
+							return true;
+						}
+					}
+
+					return false;
+				}
+
+				/* Disable tracking if the opt-out cookie exists. */
+				if ( __gtagTrackerIsOptedOut() ) {
+					for ( var index = 0; index < disableStrs.length; index++ ) {
+						window[ disableStrs[ index ] ] = true;
+					}
+				}
+
+				/* Opt-out function */
+				function __gtagTrackerOptout() {
+					for ( var index = 0; index < disableStrs.length; index++ ) {
+						document.cookie = disableStrs[ index ] + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+						window[ disableStrs[ index ] ] = true;
+					}
+				}
+
+				if ( 'undefined' === typeof gaOptout ) {
+					function gaOptout() {
+						__gtagTrackerOptout();
+					}
+				}
+								window.dataLayer = window.dataLayer || [];
+
+				window.MonsterInsightsDualTracker = {
+					helpers: {},
+					trackers: {},
+				};
+				if ( mi_track_user ) {
+					function __gtagDataLayer() {
+						dataLayer.push( arguments );
+					}
+
+					function __gtagTracker( type, name, parameters ) {
+						if (!parameters) {
+							parameters = {};
+						}
+
+						if (parameters.send_to) {
+							__gtagDataLayer.apply( null, arguments );
+							return;
+						}
+
+						if ( type === 'event' ) {
+															parameters.send_to = monsterinsights_frontend.v4_id;
+								var hookName = name;
+								if ( typeof parameters[ 'event_category' ] !== 'undefined' ) {
+									hookName = parameters[ 'event_category' ] + ':' + name;
+								}
+
+								if ( typeof MonsterInsightsDualTracker.trackers[ hookName ] !== 'undefined' ) {
+									MonsterInsightsDualTracker.trackers[ hookName ]( parameters );
+								} else {
+									__gtagDataLayer( 'event', name, parameters );
+								}
+							
+															parameters.send_to = monsterinsights_frontend.ua;
+								__gtagDataLayer( type, name, parameters );
+													} else {
+							__gtagDataLayer.apply( null, arguments );
+						}
+					}
+					__gtagTracker( 'js', new Date() );
+					__gtagTracker( 'set', {
+						'developer_id.dZGIzZG' : true,
+											} );
+										__gtagTracker( 'config', 'G-3WN7RP75N7', {"forceSSL":"true","link_attribution":"true"} );
+															__gtagTracker( 'config', 'UA-24616833-1', {"forceSSL":"true","link_attribution":"true"} );
+										window.gtag = __gtagTracker;											(function () {
+							/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+							/* ga and __gaTracker compatibility shim. */
+							var noopfn = function () {
+								return null;
+							};
+							var newtracker = function () {
+								return new Tracker();
+							};
+							var Tracker = function () {
+								return null;
+							};
+							var p = Tracker.prototype;
+							p.get = noopfn;
+							p.set = noopfn;
+							p.send = function (){
+								var args = Array.prototype.slice.call(arguments);
+								args.unshift( 'send' );
+								__gaTracker.apply(null, args);
+							};
+							var __gaTracker = function () {
+								var len = arguments.length;
+								if ( len === 0 ) {
+									return;
+								}
+								var f = arguments[len - 1];
+								if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+									if ( 'send' === arguments[0] ) {
+										var hitConverted, hitObject = false, action;
+										if ( 'event' === arguments[1] ) {
+											if ( 'undefined' !== typeof arguments[3] ) {
+												hitObject = {
+													'eventAction': arguments[3],
+													'eventCategory': arguments[2],
+													'eventLabel': arguments[4],
+													'value': arguments[5] ? arguments[5] : 1,
+												}
+											}
+										}
+										if ( 'pageview' === arguments[1] ) {
+											if ( 'undefined' !== typeof arguments[2] ) {
+												hitObject = {
+													'eventAction': 'page_view',
+													'page_path' : arguments[2],
+												}
+											}
+										}
+										if ( typeof arguments[2] === 'object' ) {
+											hitObject = arguments[2];
+										}
+										if ( typeof arguments[5] === 'object' ) {
+											Object.assign( hitObject, arguments[5] );
+										}
+										if ( 'undefined' !== typeof arguments[1].hitType ) {
+											hitObject = arguments[1];
+											if ( 'pageview' === hitObject.hitType ) {
+												hitObject.eventAction = 'page_view';
+											}
+										}
+										if ( hitObject ) {
+											action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
+											hitConverted = mapArgs( hitObject );
+											__gtagTracker( 'event', action, hitConverted );
+										}
+									}
+									return;
+								}
+
+								function mapArgs( args ) {
+									var arg, hit = {};
+									var gaMap = {
+										'eventCategory': 'event_category',
+										'eventAction': 'event_action',
+										'eventLabel': 'event_label',
+										'eventValue': 'event_value',
+										'nonInteraction': 'non_interaction',
+										'timingCategory': 'event_category',
+										'timingVar': 'name',
+										'timingValue': 'value',
+										'timingLabel': 'event_label',
+										'page' : 'page_path',
+										'location' : 'page_location',
+										'title' : 'page_title',
+									};
+									for ( arg in args ) {
+																				if ( ! ( ! args.hasOwnProperty(arg) || ! gaMap.hasOwnProperty(arg) ) ) {
+											hit[gaMap[arg]] = args[arg];
+										} else {
+											hit[arg] = args[arg];
+										}
+									}
+									return hit;
+								}
+
+								try {
+									f.hitCallback();
+								} catch ( ex ) {
+								}
+							};
+							__gaTracker.create = newtracker;
+							__gaTracker.getByName = newtracker;
+							__gaTracker.getAll = function () {
+								return [];
+							};
+							__gaTracker.remove = noopfn;
+							__gaTracker.loaded = true;
+							window['__gaTracker'] = __gaTracker;
+						})();
+									} else {
+										console.log( "" );
+					( function () {
+							function __gtagTracker() {
+								return null;
+							}
+							window['__gtagTracker'] = __gtagTracker;
+							window['gtag'] = __gtagTracker;
+					} )();
+									}
+			</script>
+				<!-- / Google Analytics by MonsterInsights -->
+				<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.patridgedev.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.11"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='../../../../wp-includes/css/dist/block-library/style.mine6b3.css?ver=5.4.11' type='text/css' media='all' />
+<link rel='stylesheet' id='mantra-style-css'  href='../../../../wp-content/themes/mantra.3.2.0_custom/style55a0.css?ver=3.2.0' type='text/css' media='all' />
+<style id='mantra-style-inline-css' type='text/css'>
+ #wrapper { max-width: 1140px; } #content { width: 100%; max-width:800px; max-width: calc( 100% - 340px ); } #primary, #secondary { width:340px; } #primary .widget-title, #secondary .widget-title { margin-right: -2em; text-align: left; } html { font-size:15px; } body, input, textarea {font-family:"Open Sans"; } #content h1.entry-title a, #content h2.entry-title a, #content h1.entry-title, #content h2.entry-title, #front-text1 h2, #front-text2 h2 {font-family: "Merriweather"; } .widget-area {font-family:"Open Sans"; } .entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {font-family:"Merriweather"; } .nocomments, .nocomments2 {display:none;} #header-container > div { margin-top:30px; } #header-container > div { margin-left:30px; } body { background-color:#444444 !important; } #header { background-color:#333333; } #footer { background-color:#222222; } #footer2 { background-color:#171717; } #site-title span a { color:#0D85CC; } #site-description { color:#999999; } #content { color:#555555 ;} .widget-area a:link, .widget-area a:visited, a:link, a:visited ,#searchform #s:hover, #container #s:hover, #access a:hover, #wp-calendar tbody td a, #site-info a, #site-copyright a, #access li:hover > a, #access ul ul:hover > a { color:#0D85CC; } a:hover, .entry-meta a:hover, .entry-utility a:hover, .widget-area a:hover { color:#12a7ff; } #content .entry-title a, #content .entry-title, #content h1, #content h2, #content h3, #content h4, #content h5, #content h6 { color:#444444; } #content .entry-title a:hover { color:#000000; } .widget-title { background-color:#444444; } .widget-title { color:#FFFFFF; } #footer-widget-area .widget-title { color:#FFFFFF; } #footer-widget-area a { color:#666666; } #footer-widget-area a:hover { color:#888888; } .png); } .entry-content p:not(:last-child), .entry-content ul, .entry-summary ul, .entry-content ol, .entry-summary ol { margin-bottom:1.5em;} .entry-meta .entry-time { display:none; } #branding { height:125px ;} 
+/* Mantra Custom CSS */
+</style>
+<link rel='stylesheet' id='mantra-googlefont-css'  href='http://fonts.googleapis.com/css?family=Open+Sans%3A400%2C700&amp;ver=5.4.11' type='text/css' media='all' />
+<link rel='stylesheet' id='mantra-googlefont-title-css'  href='http://fonts.googleapis.com/css?family=Merriweather%3A400%2C700&amp;ver=5.4.11' type='text/css' media='all' />
+<link rel='stylesheet' id='mantra-googlefont-side-css'  href='http://fonts.googleapis.com/css?family=Open+Sans%3A400%2C700&amp;ver=5.4.11' type='text/css' media='all' />
+<link rel='stylesheet' id='mantra-googlefont-headings-css'  href='http://fonts.googleapis.com/css?family=Merriweather%3A400%2C700&amp;ver=5.4.11' type='text/css' media='all' />
+<link rel='stylesheet' id='mantra-mobile-css'  href='../../../../wp-content/themes/mantra.3.2.0_custom/resources/css/style-mobile55a0.css?ver=3.2.0' type='text/css' media='all' />
+<script type='text/javascript' src='../../../../wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend-gtag.min8833.js?ver=8.5.2'></script>
+<script data-cfasync="false" data-wpfc-render="false" type="text/javascript" id='monsterinsights-frontend-script-js-extra'>/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"}]","home_url":"https:\/\/www.patridgedev.com","hash_tracking":"false","ua":"UA-24616833-1","v4_id":"G-3WN7RP75N7"};/* ]]> */
+</script>
+<script type='text/javascript' src='../../../../wp-includes/js/jquery/jquery4a5f.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='../../../../wp-includes/js/jquery/jquery-migrate.min330a.js?ver=1.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var mantra_options = {"responsive":"1","image_class":"imageNone","equalize_sidebars":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../../../wp-content/themes/mantra.3.2.0_custom/resources/js/frontend55a0.js?ver=3.2.0'></script>
+<link rel='https://api.w.org/' href='../../../../wp-json/index.html' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Explorations in Cross-Platform Assets: 9-Slice Stretchable SVGs in Xamarin.Forms Apps' href='../../../02/23/explorations-in-cross-platform-assets-9-slice-stretchable-svgs-in-xamarin-forms-apps/index.html' />
+<link rel='next' title='Return of Netduino, .NET on small hardware' href='../../../../2017/09/11/return-of-netduino-net-on-small-hardware/index.html' />
+<meta name="generator" content="WordPress 5.4.11" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='../../../../index3ee1.html?p=516' />
+<meta name='robots' content='noindex,follow' />
+<link rel="alternate" type="application/json+oembed" href="../../../../wp-json/oembed/1.0/embed3b3d.json?url=https%3A%2F%2Fwww.patridgedev.com%2F2016%2F03%2F17%2Fcross-platform-images-in-xamarin-forms-using-svgs%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../../../wp-json/oembed/1.0/embed0805?url=https%3A%2F%2Fwww.patridgedev.com%2F2016%2F03%2F17%2Fcross-platform-images-in-xamarin-forms-using-svgs%2F&amp;format=xml" />
+<!--[if lte IE 8]> <style type="text/css" media="screen"> #access ul li, .edit-link a , #footer-widget-area .widget-title, .entry-meta,.entry-meta .comments-link, .short-button-light, .short-button-dark ,.short-button-color ,blockquote { position:relative; behavior: url(/wp-content/themes/mantra.3.2.0_custom/resources/js/PIE/PIE.php); } #access ul ul { -pie-box-shadow:0px 5px 5px #999; } #access ul li.current_page_item, #access ul li.current-menu-item , #access ul li ,#access ul ul ,#access ul ul li, .commentlist li.comment ,.commentlist .avatar, .nivo-caption, .theme-default .nivoSlider { behavior: url(/wp-content/themes/mantra.3.2.0_custom/resources/js/PIE/PIE.php); } </style> <![endif]--><!--[if lt IE 9]> 
+	<script>
+	document.createElement('header');
+	document.createElement('nav');
+	document.createElement('section');
+	document.createElement('article');
+	document.createElement('aside');
+	document.createElement('footer');
+	document.createElement('hgroup');
+	</script>
+	<![endif]--> 		<style type="text/css" id="wp-custom-css">
+			#site-description { text-transform: none; }		</style>
+			<link href="https://plus.google.com/103902189108210179119" rel="author" />
+</head>
+<body class="post-template-default single single-post postid-516 single-format-standard mantra-image-none mantra-caption-light mantra-hratio-0 mantra-sidebar-right mantra-menu-left">
+
+    <div id="toTop"><i class="crycon-back2top"></i> </div>
+	
+<div id="wrapper" class="hfeed">
+
+
+<header id="header">
+
+		<div id="masthead">
+
+			<div id="branding" role="banner" >
+
+					
+	<div id="header-container">
+	
+				<div>
+				<div id="site-title">
+					<span> <a href="../../../../index.html" title="PatridgeDev" rel="home">PatridgeDev</a> </span>
+				</div>
+				<div id="site-description" >Software developer obsessed with helping others do more with training, tooling, and automation.</div>
+			</div> 	<div class="socials" id="sheader"> 
+	
+			<a target="_blank" rel="nofollow" href="https://twitter.com/patridgedev" class="socialicons social-Twitter" title="Twitter">
+				<img alt="Twitter" src="../../../../wp-content/themes/mantra.3.2.0_custom/resources/images/socials/Twitter.png" />
+			</a>
+            	</div>
+		</div> <!-- #header-container -->
+					<div style="clear:both;"></div>
+
+			</div><!-- #branding -->
+
+            <a id="nav-toggle"><span>&nbsp; Menu</span></a>
+			<nav id="access" class="jssafe" role="navigation">
+
+					<div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div>
+	<div id="prime_nav" class="menu"><ul>
+<li ><a href="../../../../index.html">Home</a></li><li class="page_item page-item-6"><a href="../../../../about-me/index.html">About Me</a></li>
+<li class="page_item page-item-321 page_item_has_children"><a href="../../../../smudges/index.html">Smudges</a>
+<ul class='children'>
+	<li class="page_item page-item-336"><a href="../../../../smudges/smudges-privacy-policy/index.html">Smudges Privacy Policy</a></li>
+</ul>
+</li>
+</ul></div>
+
+			</nav><!-- #access -->
+
+		</div><!-- #masthead -->
+
+	<div style="clear:both;"> </div>
+
+</header><!-- #header -->
+<div id="main" class="main">
+	<div  id="forbottom" >
+			<div class="socials" id="smenur"> 
+	
+			<a target="_blank" rel="nofollow" href="https://twitter.com/patridgedev" class="socialicons social-Twitter" title="Twitter">
+				<img alt="Twitter" src="../../../../wp-content/themes/mantra.3.2.0_custom/resources/images/socials/Twitter.png" />
+			</a>
+            	</div>
+	
+		<div style="clear:both;"> </div>
+
+		
+		<section id="container">
+			<div id="content" role="main">
+
+			
+
+				<div id="nav-above" class="navigation">
+					<div class="nav-previous"><a href="../../../02/23/explorations-in-cross-platform-assets-9-slice-stretchable-svgs-in-xamarin-forms-apps/index.html" rel="prev"><span class="meta-nav">&laquo;</span> Explorations in Cross-Platform Assets: 9-Slice Stretchable SVGs in Xamarin.Forms Apps</a></div>
+					<div class="nav-next"><a href="../../../../2017/09/11/return-of-netduino-net-on-small-hardware/index.html" rel="next">Return of Netduino, .NET on small hardware <span class="meta-nav">&raquo;</span></a></div>
+				</div><!-- #nav-above -->
+
+				<article id="post-516" class="post-516 post type-post status-publish format-standard hentry category-dev tag-xamarin-forms">
+					<h1 class="entry-title">Cross-Platform Images in Xamarin.Forms Using SVGs</h1>
+										<div class="entry-meta">
+						 <span class="author vcard" > By  <a class="url fn n" rel="author" href="../../../../author/adam/index.html" title="View all posts by adam">adam</a> <span class="bl_sep">|</span></span>  <time class="onDate date published" datetime="2016-03-17T07:15:27+00:00"> <a href="index.html" title="7:15 am" rel="bookmark"><span class="entry-date">March 17, 2016</span> <span class="entry-time"> - 7:15 am</span></a> </time><span class="bl_sep">|</span><time class="updated"  datetime="2019-12-18T17:40:22+00:00">December 18, 2019</time> <span class="bl_categ"> <a href="../../../../category/dev/index.html" rel="tag">dev</a> </span>  					</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+						<div style="float: right; padding-left: 10px;"><a href="../../../../wp-content/uploads/2016/03/SampleAppScreenshot.png" rel="attachment wp-att-522"><img class="size-medium wp-image-522" src="../../../../wp-content/uploads/2016/03/SampleAppScreenshot-169x300.png" alt="Screenshot from the demo app; code available via GitHub, showing the flexibility of SVGs." width="169" height="300" /></a></div>
+
+<p>For the last four months, I&#8217;ve been working on a fast-paced Xamarin.Forms project where almost every image used has been an SVG shared between both the iOS and the Android platform apps. And it has been glorious! If an early UI design needed a few pixels shaved or added to an image we were using, no new images were needed, let alone a handful of pixel-density variations on it. It was just the few lines of code or XAML to change the rendered size. (In fact, I&#8217;ve extended our use to include stretchable buttons by <a href="http://pdev.co/1QAbQOx">adding 9-slice SVG support</a>.) With SVGs, you use one tiny XML file to render the resulting image at any size or for any screen density.</p>
+
+<h2>TL;DR</h2>
+
+<ol>
+<li>Put SVGs in a PCL as an EmbeddedResource build action</li>
+<li>Use an SVG control (I recommend <a href="https://www.nuget.org/packages/TwinTechsForms.NControl.SvgImageView/">TwinTechsForms.NControl.SvgImageView</a>, but there are other choices.)</li>
+<li>Add an <code>SvgImageView</code> to your C# or XAML UI the the right assembly and resource path</li>
+</ol>
+
+<div style="clear: both;"></div>
+
+<h2>Without SVG Images</h2>
+
+<p>Images on iOS and Android are normally managed in slightly different ways regarding naming and location. For better or worse, <a href="http://developer.xamarin.com/guides/xamarin-forms/working-with/images/#Local_Images">Xamarin.Forms</a> continues using these image conventions, making a detour from the focus on cross-platform sharing. On a normal iOS app, you want three sizes of every image with density-based names: someimage.png, someimage@2x.png, and someimage@3x.png. On Android, you generate the different-sized images with the same name, but place them in separate drawable folders: mdpi, hdpi, xhdpi, etc.</p>
+
+<p><img class="alignnone size-medium wp-image-517" src="../../../../wp-content/uploads/2016/03/AndroidImagesResourceStructure-144x300.png" alt="Typical Android images resource structure" width="144" height="300" /></p>
+
+<p><img class="alignnone size-medium wp-image-520" src="../../../../wp-content/uploads/2016/03/iOSImagesResourceStructure-300x232.png" alt="Typical iOS images resource structure" width="300" height="232" /></p>
+
+<p>While programs like Sketch have made <a href="http://www.sketchapp.com/support/documentation/11-exporting/2-slices.html">generating these multiple images from a single vector file</a> much simpler (and I&#8217;ll explain later why you will still need this), whenever you add a new one or change an existing one, that means remembering to put six or more images in their proper location. Wouldn&#8217;t it be nice if you just exported one file, put it in one location, and had that image available at any size and/or density at any time? This is where SVGs can greatly simplify things for you.</p>
+
+<p>We are going to walk through using SVGs as embedded resources for this post, but you could certainly download SVGs as they are needed. Embedded resources, as the name suggests, are stored within the compiled assembly.</p>
+
+<h2>Bringing Your SVGs to Xamarin.Forms</h2>
+
+<p>To make your SVG resources easy to use in both Xamarin.Forms platform projects, we will embed them in a common portable class library (PCL). If your Xamarin.Forms app doesn&#8217;t use a PCL for code sharing, feel free to make a separate one just for SVG assets. If you are already using a PCL to share code between platform apps, you can simply put them in their own location within that library. You could also create a separate portable library for assets, depending on your organization preference.</p>
+
+<p><a href="../../../../wp-content/uploads/2016/03/CreatingAPcl.png" rel="attachment wp-att-518"><img class="alignnone size-medium wp-image-518" src="../../../../wp-content/uploads/2016/03/CreatingAPcl-300x218.png" alt="Creating a portable class library (PCL) for your shared SVGs." width="300" height="218" /></a></p>
+
+<p>Once you have your target PCL project, you can start to further organize them however you want. (An additional benefit over Android drawables which must be all at the same directory level.) If we&#8217;re putting the SVGs in your Xamarin.Forms shared code, it might be best just to create another directory for them; you can name it whatever you like: Resources, Images, Assets, SVGs, whatever. With a destination set up, you can start adding your SVGs to the project however you prefer.</p>
+
+<p>After adding an image to your project, though, you need to remember one important step. Switch the file&#8217;s &#8220;Build action&#8221; from &#8220;None&#8221; to &#8220;EmbeddedResource&#8221; by either the Properties pad or by right-clicking it. Don&#8217;t worry. You are bound to forget to do this a few times; the SVG loading code currently throws an exception if the resource stream comes back null.</p>
+
+<p><a href="../../../../wp-content/uploads/2016/03/MakeSvgEmbeddedResource.png" rel="attachment wp-att-521"><img class="alignnone size-medium wp-image-521" src="../../../../wp-content/uploads/2016/03/MakeSvgEmbeddedResource-300x205.png" alt="Make an SVG an embedded resource." width="300" height="205" /></a></p>
+
+<p>With some SVGs in place, let&#8217;s get them showing up. For this, you have a few options, each can have their own trade-offs.</p>
+
+<h2>Xamarin.Forms SVG Controls</h2>
+
+<p>One of the first Xamarin.Forms SVG controls was <a href="https://github.com/paulpatarinski/Xamarin.Forms.Plugins/blob/master/SVG/">SvgImage from GitHub user paulpatarinski</a>. This SvgImage control was created prior to NGraphics offering really solid SVG support, so it uses a custom fork. You may be just fine using this library, but it you are already using NGraphics for something else, you will end up with two almost-identical libraries compiled into your app. Additionally, this version can choke on some SVG elements that others can handle.</p>
+
+<p>With NGraphics&#8217; SVG support vastly improved, while working on Xamarin.Forms projects at Twin Technologies I created a custom version of SvgImage that uses the standard NGraphics NuGet package directly. This variant, TwinTechsForms.SvgImage, is <a href="https://www.nuget.org/packages/TwinTechsForms.SvgImage/">available as a NuGet package</a>. In addition to updating NGraphics, I also <a href="http://pdev.co/1QAbQOx">added 9-slice SVG support</a> to SvgImage control. This control does not offer Windows Phone or UWP support yet.</p>
+
+<p><a href="https://github.com/chrfalch/NControl.Controls">NControl.Controls</a> also offers an SvgImage control using NGraphics. (NControl is a Xamarin.Forms control created as a wrapper around NGraphics for custom-drawn cross-platform controls, with NControl.Controls being sample implementations.)</p>
+
+<p>While it isn&#8217;t derived from the NControl SvgImage control (<a href="https://github.com/chrfalch/NControl.Controls/issues/23">yet!</a>), I have also ported the 9-slice SVG implementation found in the TwinTechsForms.SvgImage control to an NControl version: <a href="https://www.nuget.org/packages/TwinTechsForms.NControl.SvgImageView/">TwinTechsForms.NControl.SvgImageView (also available on NuGet)</a>. This control does not offer Windows Phone or UWP support yet.</p>
+
+<p>No matter which SVG control you pick, you&#8217;ll want to add the package to both your Xamarin.Forms PCL project(s) as well as all of your platform projects. For the rest of this post, the code is based on <a href="https://www.nuget.org/packages/TwinTechsForms.NControl.SvgImageView/">TwinTechsForms.NControl.SvgImageView</a>, so the exact code might be different for other SVG control libraries.</p>
+
+<h2>Using TwinTechsForms.NControl.SvgImageView</h2>
+
+<p>There is some initialization required to make SvgImageView work, but it&#8217;s a simple line in the platform projects after Xamarin.Forms initializes (AppDelegate.cs for iOS, MainActivity.cs for Android).</p>
+
+<p>Xamarin.Forms.Init();
+SvgImageRenderer.Init();</p>
+
+<p>NOTE: without this line, SvgImageView will silently fail to use the custom renderer. I hope to eliminate the need for it at some point, but it is still needed for now.</p>
+
+<p>Once we have the platform renderer <code>Init</code> in place, we can start putting <code>SvgImageView</code> in our UI code/XAML.</p>
+
+<p>new SvgImageView {
+SvgAssembly = typeof(App).GetTypeInfo().Assembly,
+SvgPath = &#8220;some.embedded.resource.path.svg&#8221;,
+WidthRequest = 48,
+HeightRequest = 48,
+}</p>
+
+<p>The <code>SvgAssembly</code> field might look a little unusual, but that is how we point our control to the assembly where the embedded resource is actually found. <code>SvgPath</code> is the string you pulled from the file&#8217;s properties.</p>
+
+<p>If you are doing your SvgImageViews in XAML, which you certainly do, you will have to get your <code>SvgAssembly</code> from somewhere. (It may be possible in raw XAML, but my XAML skills were not up to par.)</p>
+
+<p>&nbsp;</p>
+
+<p>You can see <a href="https://github.com/patridge/SvgImageDemo/blob/master/SvgImageDemo/SvgImageXamlDemoPage.xaml">SvgImageView XAML in action</a> in the demo repo for this blog post. In that case, I used a view model with an Assembly property to bind to <code>SvgImageView.SvgAssembly</code>.</p>
+
+<p>Now we can start getting our SVGs rendering on the screen.</p>
+
+<h2>Embedded Resource SVG Gotchas</h2>
+
+<p>While you are experimenting with SvgImageView/SvgImage control, you are bound to hit a few mistakes. (There are some mistakes that I make almost every single time.)</p>
+
+<p>Forgetting the <code>SvgAssembly</code> property results in a null reference exception in most controls. If you forget it, this exception will bubble up from the SvgImageView control, so it isn&#8217;t immediately obvious what went wrong. In an internal version of our SvgImageView control, we ended up setting a static <code>DefaultSvgAssembly</code> property so that all SVGs could be assumed to come from one location. This saved us from even bothering to add the line.</p>
+
+<p>If you set the <code>SvgPath</code> incorrectly, you&#8217;re going to have issues at runtime as well. In some controls, it is an exception. In some, it just doesn&#8217;t render anything. It&#8217;s definitely worth checking the path you set against the value in the Properties pad for the file you want to use.</p>
+
+<p>Even when you get what would be the correct embedded resource path, it is incredibly easy to forget to flag the file itself as an embedded resource. Every time you add an SVG, you need to do this before you try to render it. This error will also either be a runtime exception or result in nothing being rendered. With as many times as I&#8217;ve made this mistake, don&#8217;t ever feel bad when you go debugging an issue only to find there isn&#8217;t an SVG where you are pointing for this very reason.</p>
+
+<h2>Shared SVG Limitations</h2>
+
+<p>Remember when I said you would still need to export your images into the various density sizes? That is where one of the limitations of using SVGs comes in. Platform assets like launcher icons still require the various explicit assets because they are handled by the system before your Xamarin code can be used.</p>
+
+<p>Additionally, there are some arguments for custom images when rendering an image at tiny icon sizes (or a separate SVG optimized for that purpose). Not every SVG detail will be discernible at the smallest sizes you need. This isn&#8217;t necessarily a limited of SVGs as much as complex graphics in general.</p>
+
+<p>NGraphics has made some great progress toward consuming almost any SVGs I throw at it, but that could be more a symptom of the simplicity of my graphics and the use of <a href="http://www.sketchapp.com/">Sketch</a>. There are definitely SVGs that can either blow up rendering at runtime or render in unusual ways. Sometimes it is as simple as removing extra SVG non-rendering element cruft that came along from your export. If you run into an SVG that is giving you trouble, you can try exporting them from a different vector graphics application that may result in simpler paths. If you have a background with rendering SVGs, I&#8217;m sure <a href="https://github.com/praeclarum/NGraphics">NGraphics</a> could use your help adding support for more elements.</p>
+
+<p>Even SVG elements that do render (in some controls), don&#8217;t always render as expected. On prime example of this is the <code>text</code> element. If you have a text element, it likely has a typeface defined for it. There may be a way to make this work, but it might require some extra setup. So far, the easiest way to make text work is to output the SVG text as a path instead of a text element. For example, Sketch can convert text to outline paths that will work great in for SVG use.</p>
+
+<p><a href="../../../../wp-content/uploads/2016/03/SketchConvertToOutlines.png" rel="attachment wp-att-523"><img class="alignnone size-medium wp-image-523" src="../../../../wp-content/uploads/2016/03/SketchConvertToOutlines-300x281.png" alt="Converting text to outlines for SVG use in Sketch." width="300" height="281" /></a></p>
+
+<h2>Parting Thoughts</h2>
+
+<p>There are definitely limitations to using SVGs, but they can still vastly simplify your image workflow. Adding SVG support to your pre-existing app can be done without breaking any of your current image use, so it is ideal for adding to existing projects without rewriting your UI code. If you happen to give one of the TwinTechsForms NuGet packages, I&#8217;d love to hear your thoughts. Should you run into any issues, don&#8217;t hesitate to <a href="https://github.com/twintechs/TwinTechsFormsLib/issues">send a GitHub issue my way</a>. Feel free to send any feedback my way <a href="https://twitter.com/PatridgeDev">on Twitter</a> or leave a comment here. If you have any thoughts for improvements, pull requests are always welcome (or file an issue).</p>
+											</div><!-- .entry-content -->
+
+					<div class="entry-utility">
+						<span class="bl_posted">Tagged <a href="../../../../tag/xamarin-forms/index.html" rel="tag">xamarin.forms</a>.</span><span class="bl_bookmark"> Bookmark the  <a href="index.html" title="Permalink to Cross-Platform Images in Xamarin.Forms Using SVGs" rel="bookmark"> permalink</a>.</span>											</div><!-- .entry-utility -->
+				</article><!-- #post-## -->
+
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-4444550246692905";
+/* Between Posts Leaderboard */
+google_ad_slot = "1716223608";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+
+				<div id="nav-below" class="navigation">
+					<div class="nav-previous"><a href="../../../02/23/explorations-in-cross-platform-assets-9-slice-stretchable-svgs-in-xamarin-forms-apps/index.html" rel="prev"><span class="meta-nav">&laquo;</span> Explorations in Cross-Platform Assets: 9-Slice Stretchable SVGs in Xamarin.Forms Apps</a></div>
+					<div class="nav-next"><a href="../../../../2017/09/11/return-of-netduino-net-on-small-hardware/index.html" rel="next">Return of Netduino, .NET on small hardware <span class="meta-nav">&raquo;</span></a></div>
+				</div><!-- #nav-below -->
+
+				
+			<div id="comments">
+
+
+	<h3 id="comments-title">
+		4 Responses to <em>Cross-Platform Images in Xamarin.Forms Using SVGs</em>	</h3> 
+	<ol class="commentlist">
+			
+			<li class="post pingback">
+		<p>Pingback: <a href='http://xamgeek.com/blog/httpswww-syntaxismyui-comweekly-xamarin-newsletter-issue-84/' rel='external nofollow ugc' class='url'>Adam J Wolf: Weekly Xamarin Newsletter Issue #84 &#8211; XamGeek.com</a></p>
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-34">
+		<div id="comment-34">
+		<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/54f7e39b54c125b935a516ef080fcb94?s=40&amp;d=identicon&amp;r=g' srcset='https://secure.gravatar.com/avatar/54f7e39b54c125b935a516ef080fcb94?s=80&#038;d=identicon&#038;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' /><cite class="fn">Korayem</cite> <span class="says">says:</span>
+
+
+		</div><!-- .comment-author .vcard -->
+
+		<div class="comment-meta commentmetadata"><a href="index.html#comment-34">
+			September 14, 2016 at 2:23 am</a>		</div><!-- .comment-meta .commentmetadata -->
+
+		<div class="comment-body">
+				<p>Hey! is there a way to use SVG as ContentPage icons such that they render properly when added as children to a TabbedPage?</p>
+</div>
+
+		<div class="reply">
+			<a rel='nofollow' class='comment-reply-link' href='index3d09.html?replytocom=34#respond' data-commentid="34" data-postid="516" data-belowelement="comment-34" data-respondelement="respond" aria-label='Reply to Korayem'>Reply</a>		</div><!-- .reply -->
+	</div><!-- #comment-##  -->
+
+	<ul class="children">
+	<li class="comment byuser comment-author-adam bypostauthor odd alt depth-2" id="li-comment-35">
+		<div id="comment-35">
+		<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/29f7fb03af5c354d6098f0300114056b?s=40&amp;d=identicon&amp;r=g' srcset='https://secure.gravatar.com/avatar/29f7fb03af5c354d6098f0300114056b?s=80&#038;d=identicon&#038;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' /><cite class="fn"><a href='../../../../index.html' rel='external nofollow ugc' class='url'>Adam Patridge</a></cite> <span class="says">says:</span>
+
+
+		</div><!-- .comment-author .vcard -->
+
+		<div class="comment-meta commentmetadata"><a href="index.html#comment-35">
+			September 23, 2016 at 3:10 pm</a>		</div><!-- .comment-meta .commentmetadata -->
+
+		<div class="comment-body">
+				<p>I haven&#8217;t given the TabbedPage a shot yet, but I suspect SVGs won&#8217;t be an option there. My suspicion is that since a Page&#8217;s Icon is a FileImageSource under the hood, that trying to inject an SVG into that process wouldn&#8217;t be trivial. There may be potential for a custom renderer or platform effect that puts the SVG in the proper platform location for use, though.</p>
+</div>
+
+		<div class="reply">
+			<a rel='nofollow' class='comment-reply-link' href='index61aa.html?replytocom=35#respond' data-commentid="35" data-postid="516" data-belowelement="comment-35" data-respondelement="respond" aria-label='Reply to Adam Patridge'>Reply</a>		</div><!-- .reply -->
+	</div><!-- #comment-##  -->
+
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment even thread-odd thread-alt depth-1" id="li-comment-37">
+		<div id="comment-37">
+		<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/8aee45df0bf6983bdc738d0868d6c2bb?s=40&amp;d=identicon&amp;r=g' srcset='https://secure.gravatar.com/avatar/8aee45df0bf6983bdc738d0868d6c2bb?s=80&#038;d=identicon&#038;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' /><cite class="fn"><a href='http://www.vapolia.fr/' rel='external nofollow ugc' class='url'>Andrea</a></cite> <span class="says">says:</span>
+
+
+		</div><!-- .comment-author .vcard -->
+
+		<div class="comment-meta commentmetadata"><a href="index.html#comment-37">
+			August 3, 2017 at 11:14 am</a>		</div><!-- .comment-meta .commentmetadata -->
+
+		<div class="comment-body">
+				<p>XamSvg now supports rendering tabbed page icons with svg ! See <a href="https://github.com/softlion/XamSvg-Samples/tree/prerelease" rel="nofollow ugc">https://github.com/softlion/XamSvg-Samples/tree/prerelease</a> for the demo project.</p>
+</div>
+
+		<div class="reply">
+			<a rel='nofollow' class='comment-reply-link' href='indexc916.html?replytocom=37#respond' data-commentid="37" data-postid="516" data-belowelement="comment-37" data-respondelement="respond" aria-label='Reply to Andrea'>Reply</a>		</div><!-- .reply -->
+	</div><!-- #comment-##  -->
+
+	</li><!-- #comment-## -->
+	
+	</ol>
+
+	
+	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply to <a href="#comment-35">Adam Patridge</a> <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond">Cancel reply</a></small></h3><form action="https://www.patridgedev.com/wp-comments-post.php" method="post" id="commentform" class="comment-form"><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required='required' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" required='required' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" maxlength="200" /></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" /> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='516' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='35' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="a74b69e8b3" /></p><p style="display: none !important;"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="182"/><script>document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p></form>	</div><!-- #respond -->
+	<p class="akismet_comment_form_privacy_notice">This site uses Akismet to reduce spam. <a href="https://akismet.com/privacy/" target="_blank" rel="nofollow noopener">Learn how your comment data is processed</a>.</p>
+</div><!-- #comments -->
+
+
+						</div><!-- #content -->
+			<div id="primary" class="widget-area" role="complementary">
+
+		
+		
+			<ul class="xoxo">
+				<li id="search-2" class="widget-container widget_search"><form method="get" id="searchform" action="https://www.patridgedev.com/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="s" placeholder="Search" value="" name="s" />
+	</label>
+	<button type="submit" class="searchsubmit"><span class="screen-reader-text">Search</span>OK</button>
+</form>
+</li>		<li id="recent-posts-2" class="widget-container widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+											<li>
+					<a href="../../../../2019/09/27/copy-command-line-output-to-the-clipboard-on-macos-windows-and-linux/index.html">Copy command line output to the clipboard on macOS, Windows, and Linux</a>
+									</li>
+											<li>
+					<a href="../../../../2019/08/06/determine-sha-hash-of-file-on-windows-linux-and-macos/index.html">Determine SHA hash of file on Windows, Linux, and macOS</a>
+									</li>
+											<li>
+					<a href="../../../../2019/05/20/workaround-xamarin-android-long-paths-on-windows/index.html">Workaround: Xamarin.Android long paths on Windows</a>
+									</li>
+											<li>
+					<a href="../../../../2019/02/06/play-japanese-famicom-games-with-your-us-nintendo-switch-online-account/index.html">Play Japanese Famicom games with your US Nintendo Switch Online account</a>
+									</li>
+											<li>
+					<a href="../../../../2018/10/29/fallback-variables-in-dotnet-new-templates/index.html">Fallback variables in `dotnet new` templates</a>
+									</li>
+					</ul>
+		</li><li id="text-3" class="widget-container widget_text">			<div class="textwidget"><p><!--Amazon--><br />
+<iframe src="http://web.archive.org/web/20190427210543if_/http://rcm-na.amazon-adsystem.com/e/cm?t=pricetrack-20&amp;o=1&amp;p=9&amp;l=ez&amp;f=ifr&amp;f=ifr&amp;linkID=U4QK3RSRY7VEZR26" scrolling="no" marginwidth="0" marginheight="0" border="0" frameborder="0" style="border:none;"></iframe></p>
+</div>
+		</li>			</ul>
+
+			<ul class="xoxo">
+				<li id="text-2" class="widget-container widget_text"><h3 class="widget-title">PatridgeDev elsewhere</h3>			<div class="textwidget"><p><a href="https://stackoverflow.com/users/48700/patridge"><br />
+<img src="https://stackoverflow.com/users/flair/48700.png" width="208" height="58" alt="profile for patridge at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for patridge at Stack Overflow, Q&amp;A for professional and enthusiast programmers"><br />
+</a>
+</div>
+<div>
+<a href="https://xamarin.com/mvp"><img src="../../../../wp-content/uploads/2015/04/MVP-Badge2-300x127.png" alt="Xamarin MVP" style="width:200px;"/></a>
+</div>
+<div>
+<a href="https://university.xamarin.com/certification"><img src="../../../../wp-content/uploads/2015/04/Xamarin-Ceritified-Mobile-Developer-Badge-small-res.png" alt="Xamarin Certified Mobile Developer" style="width:150px;"/></a>
+</div>
+<div>
+<a class="twitter-timeline" href="https://twitter.com/PatridgeDev" data-widget-id="349542841673973761">Tweets by @PatridgeDev</a><br />
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>
+</div>
+		</li>			</ul>
+
+			
+		</div><!-- #primary .widget-area -->
+
+			</section><!-- #container -->
+
+	<div style="clear:both;"></div>
+
+	</div> <!-- #forbottom -->
+	</div><!-- #main -->
+
+
+	<footer id="footer" role="contentinfo">
+		<div id="colophon">
+		
+			
+
+	<div id="footer-widget-area"  role="complementary"  class="footerone" >
+
+	
+			<div id="second" class="widget-area">
+			<ul class="xoxo">
+				<li id="text-5" class="widget-container widget_text">			<div class="textwidget"><div id="amzn-assoc-ad-d543690b-5196-4e42-ab6e-dc8f3891227e"></div>
+<p><script async src="http://z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&amp;adInstanceId=d543690b-5196-4e42-ab6e-dc8f3891227e"></script></p>
+</div>
+		</li>			</ul>
+		</div><!-- #second .widget-area -->
+	
+	
+		
+	</div><!-- #footer-widget-area -->
+			
+		</div><!-- #colophon -->
+
+		<div id="footer2">
+		
+			<div style="text-align:center;clear:both;padding-top:4px;" >
+	<a href="../../../../index.html" title="PatridgeDev" rel="home">
+		PatridgeDev</a> | Powered by <a target="_blank" href="http://www.cryoutcreations.eu/mantra" title="Mantra Theme by Cryout Creations">Mantra</a> &amp; <a target="_blank" href="http://wordpress.org/"
+		title="Semantic Personal Publishing Platform">  WordPress.	</a>
+</div><!-- #site-info --> 	<div class="socials" id="sfooter"> 
+	
+			<a target="_blank" rel="nofollow" href="https://twitter.com/patridgedev" class="socialicons social-Twitter" title="Twitter">
+				<img alt="Twitter" src="../../../../wp-content/themes/mantra.3.2.0_custom/resources/images/socials/Twitter.png" />
+			</a>
+            	</div>
+				
+		</div><!-- #footer2 -->
+
+	</footer><!-- #footer -->
+
+</div><!-- #wrapper -->
+
+<script type='text/javascript' src='../../../../wp-includes/js/comment-reply.mine6b3.js?ver=5.4.11'></script>
+<script type='text/javascript' src='../../../../wp-includes/js/wp-embed.mine6b3.js?ver=5.4.11'></script>
+
+</body>
+
+<!-- Mirrored from www.patridgedev.com/2016/03/17/cross-platform-images-in-xamarin-forms-using-svgs/?replytocom=35 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 17:32:09 GMT -->
+</html>

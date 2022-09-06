@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>ios7 &#8211; PatridgeDev</title>
+	<atom:link href="https://www.patridgedev.com/tag/ios7/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.patridgedev.com</link>
+	<description>Software developer obsessed with helping others do more with training, tooling, and automation.</description>
+	<lastBuildDate>Wed, 25 Sep 2013 05:23:23 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.4.11</generator>
+	<item>
+		<title>Xamarin.iOS C# Recipe: Animating Views with iOS 7 UIGravityBehavior (UIKit Dynamics)</title>
+		<link>https://www.patridgedev.com/2013/09/24/ios-7-recipe-animating-views-with-uigravitybehavior-uikit-dynamics/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=ios-7-recipe-animating-views-with-uigravitybehavior-uikit-dynamics</link>
+					<comments>https://www.patridgedev.com/2013/09/24/ios-7-recipe-animating-views-with-uigravitybehavior-uikit-dynamics/#respond</comments>
+		
+		<dc:creator><![CDATA[adam]]></dc:creator>
+		<pubDate>Wed, 25 Sep 2013 05:23:23 +0000</pubDate>
+				<category><![CDATA[dev]]></category>
+		<category><![CDATA[c#]]></category>
+		<category><![CDATA[ios7]]></category>
+		<category><![CDATA[monotouch]]></category>
+		<category><![CDATA[xamarin.ios]]></category>
+		<guid isPermaLink="false">http://www.patridgedev.com/?p=265</guid>
+
+					<description><![CDATA[Now that iOS 7 has landed, and Xamarin gave us same-day C# support, it&#8217;s time to start poking at the new bits. One such piece is UIKit Dynamics. With UIKit Dynamics, you can greatly simplify all sorts of view animations. While this simple recipe will only address UIGravityBehavior, iOS 7 adds a bunch of other predefined behaviors and allows the creation of custom ones as well. Source code is available on GitHub. Basic Gravity Animation To have a view simply start falling off the screen, you just toss the desired view at a new UIGravityBehavior and add that behavior to a UIDynamicAnimator. UIDynamicAnimator animator; public override void ViewDidLoad() { base.ViewDidLoad(); View.BackgroundColor = UIColor.White; animator = new UIDynamicAnimator(View); var item = new UIView(new RectangleF(new PointF(50f, 0f), new SizeF(50f, 50f))) { BackgroundColor = UIColor.Blue, }; View.Add(item); UIGravityBehavior gravity = new UIGravityBehavior(item); animator.AddBehavior(gravity); } You can continue to put items under the effect of gravity by adding them to the behavior. gravity.AddItem(someOtherView); That&#8217;s really it for basic gravity, but craziness is only a step beyond that. You can modify the Angle, GravityDirection, and Magnitude of your gravity as well. Potential Memory/Performance Trap It&#8217;s worth noting that those items that go flying off the... <a class="continue-reading-link" href="https://www.patridgedev.com/2013/09/24/ios-7-recipe-animating-views-with-uigravitybehavior-uikit-dynamics/"> Continue reading <span class="meta-nav">&#8594; </span></a>]]></description>
+		
+					<wfw:commentRss>https://www.patridgedev.com/2013/09/24/ios-7-recipe-animating-views-with-uigravitybehavior-uikit-dynamics/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

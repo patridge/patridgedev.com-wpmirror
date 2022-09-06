@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>command line &#8211; PatridgeDev</title>
+	<atom:link href="https://www.patridgedev.com/tag/command-line/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.patridgedev.com</link>
+	<description>Software developer obsessed with helping others do more with training, tooling, and automation.</description>
+	<lastBuildDate>Wed, 31 Aug 2022 18:53:09 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.4.11</generator>
+	<item>
+		<title>Copy command line output to the clipboard on macOS, Windows, and Linux</title>
+		<link>https://www.patridgedev.com/2019/09/27/copy-command-line-output-to-the-clipboard-on-macos-windows-and-linux/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=copy-command-line-output-to-the-clipboard-on-macos-windows-and-linux</link>
+					<comments>https://www.patridgedev.com/2019/09/27/copy-command-line-output-to-the-clipboard-on-macos-windows-and-linux/#respond</comments>
+		
+		<dc:creator><![CDATA[adam]]></dc:creator>
+		<pubDate>Fri, 27 Sep 2019 13:30:44 +0000</pubDate>
+				<category><![CDATA[dev]]></category>
+		<category><![CDATA[command line]]></category>
+		<guid isPermaLink="false">https://www.patridgedev.com/?p=682</guid>
+
+					<description><![CDATA[NOTE: Updated for PowerShell 7, with Set-Clipboard available to supported platforms (Linux still requires xclip). You&#8217;ve just figured out the exact piece of information you need from a command line call. Now, how do you get it out of your terminal and take it somewhere else, like an email, chat, or document? Fortunately, there are already programs out there to make this easy. You can send the output from any command to one of these applications, and the output will be available in your clipboard. From there, you can paste it anywhere you please. In the case of Windows and macOS, there are programs to do this that come with the OS. On Linux, you can install a tool to have the same functionality. Windows Whether you are in Command Prompt or PowerShell (old-school or Core), you can use the Windows clip application to get output to the clipboard. Should it matter to you, clip will append an extra line break to whatever you feed it. command {some command} &#124; clip For example, to dump your file listing to the clipboard, you would run dir &#124; clip or Get-ChildItem . &#124; clip, with dir working in both cmd and all... <a class="continue-reading-link" href="https://www.patridgedev.com/2019/09/27/copy-command-line-output-to-the-clipboard-on-macos-windows-and-linux/"> Continue reading <span class="meta-nav">&#8594; </span></a>]]></description>
+		
+					<wfw:commentRss>https://www.patridgedev.com/2019/09/27/copy-command-line-output-to-the-clipboard-on-macos-windows-and-linux/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Determine SHA hash of file on Windows, Linux, and macOS</title>
+		<link>https://www.patridgedev.com/2019/08/06/determine-sha-hash-of-file-on-windows-linux-and-macos/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=determine-sha-hash-of-file-on-windows-linux-and-macos</link>
+					<comments>https://www.patridgedev.com/2019/08/06/determine-sha-hash-of-file-on-windows-linux-and-macos/#respond</comments>
+		
+		<dc:creator><![CDATA[adam]]></dc:creator>
+		<pubDate>Tue, 06 Aug 2019 12:00:06 +0000</pubDate>
+				<category><![CDATA[dev]]></category>
+		<category><![CDATA[command line]]></category>
+		<guid isPermaLink="false">https://www.patridgedev.com/?p=675</guid>
+
+					<description><![CDATA[While it doesn&#8217;t guarantee a download hasn&#8217;t been compromised, sometimes you feel better knowing the file you downloaded matches the expected SHA hash. Full disclosure here: while I haven&#8217;t been paid or provided anything for this blog post, I am only creating this post for me. If it helps you, great! I just keep looking this up every time I need it. Instead of wading through a bunch of Stack Overflow answers to find the exact magic command I need, I&#8217;m hoping I&#8217;ll start finding my own blog post in my search results. SHA-256 hash commands Here&#8217;s what I use most days. There are bound to be other ways to do this, and on more operating systems or command line shells. As well, there may be ways that are better suited for certain tasks like scripting or other automation steps. For the occasional one-off hash needs, though, they get the job done. macOS shasum --algorithm 256 ~/Downloads/some-file.zip Windows (cmd.exe) CertUtil -hashfile ~/Downloads/some-file.zip SHA256 Windows (PowerShell) Confirmed in v6.1.3 [Core], but it probably works in several earlier versions. Get-FileHash -Path ~/Downloads/some-file.zip -Algorithm SHA256 Linux I&#8217;ve only confirmed this on a few flavors of Ubuntu and Debian/Raspbian. sha256sum ~/Downloads/some-file.zip Background If you... <a class="continue-reading-link" href="https://www.patridgedev.com/2019/08/06/determine-sha-hash-of-file-on-windows-linux-and-macos/"> Continue reading <span class="meta-nav">&#8594; </span></a>]]></description>
+		
+					<wfw:commentRss>https://www.patridgedev.com/2019/08/06/determine-sha-hash-of-file-on-windows-linux-and-macos/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

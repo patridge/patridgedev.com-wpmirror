@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>ihtmlstring &#8211; PatridgeDev</title>
+	<atom:link href="https://www.patridgedev.com/tag/ihtmlstring/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.patridgedev.com</link>
+	<description>Software developer obsessed with helping others do more with training, tooling, and automation.</description>
+	<lastBuildDate>Thu, 05 Jul 2012 18:26:17 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.4.11</generator>
+	<item>
+		<title>Where did that JSON field go? Serializing IHtmlString to JSON.</title>
+		<link>https://www.patridgedev.com/2012/07/05/where-did-that-json-field-go-serializing-ihtmlstring-to-json/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=where-did-that-json-field-go-serializing-ihtmlstring-to-json</link>
+					<comments>https://www.patridgedev.com/2012/07/05/where-did-that-json-field-go-serializing-ihtmlstring-to-json/#comments</comments>
+		
+		<dc:creator><![CDATA[adam]]></dc:creator>
+		<pubDate>Thu, 05 Jul 2012 18:26:17 +0000</pubDate>
+				<category><![CDATA[dev]]></category>
+		<category><![CDATA[c#]]></category>
+		<category><![CDATA[ihtmlstring]]></category>
+		<category><![CDATA[json]]></category>
+		<category><![CDATA[json.net]]></category>
+		<guid isPermaLink="false">http://www.patridgedev.com/?p=176</guid>
+
+					<description><![CDATA[TL;DR If your brain consumes Stack Overflow questions better than blog posts, go see &#8220;How do I serialize IHtmlString to JSON with Json.NET?&#8221; over there. IHtmlString doesn&#8217;t play nicely with JSON serialization If you have an IHtmlString in your JSON (regardless of arguments against putting raw HTML in JSON), you will probably need to customize the serialization to get the HTML out of that variable. In fact, the serialization will probably be invalid compared to what you expect; it does make sense if you think about how the serialization process works. Fortunately, putting together a quick Json.NET JsonConverter will make the issue go away. What you might expect from some object containing an IHtmlString variable named x: { x = "some &#60;span&#62;text&#60;/span&#62;" } What default .NET JavaScript serialization and default Json.NET serialization will give you for said object: { x = { } } How to fix it with Json.NET: public class IHtmlStringConverter : Newtonsoft.Json.JsonConverter { public override bool CanConvert(Type objectType) { return typeof(IHtmlString).IsAssignableFrom(objectType); } ... public override void WriteJson(Newtonsoft.Json.JsonWriter writer, object value, Newtonsoft.Json.JsonSerializer serializer) { IHtmlString source = value as IHtmlString; if (source == null) { return; } writer.WriteValue(source.ToString()); } } Background While working on some random API, we... <a class="continue-reading-link" href="https://www.patridgedev.com/2012/07/05/where-did-that-json-field-go-serializing-ihtmlstring-to-json/"> Continue reading <span class="meta-nav">&#8594; </span></a>]]></description>
+		
+					<wfw:commentRss>https://www.patridgedev.com/2012/07/05/where-did-that-json-field-go-serializing-ihtmlstring-to-json/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

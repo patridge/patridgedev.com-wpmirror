@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>template &#8211; PatridgeDev</title>
+	<atom:link href="https://www.patridgedev.com/tag/template/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.patridgedev.com</link>
+	<description>Software developer obsessed with helping others do more with training, tooling, and automation.</description>
+	<lastBuildDate>Mon, 22 Oct 2018 20:00:49 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.4.11</generator>
+	<item>
+		<title>Add variables to your custom `dotnet new` template</title>
+		<link>https://www.patridgedev.com/2018/10/22/add-variables-to-your-custom-dotnet-new-template/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=add-variables-to-your-custom-dotnet-new-template</link>
+					<comments>https://www.patridgedev.com/2018/10/22/add-variables-to-your-custom-dotnet-new-template/#respond</comments>
+		
+		<dc:creator><![CDATA[adam]]></dc:creator>
+		<pubDate>Mon, 22 Oct 2018 20:00:49 +0000</pubDate>
+				<category><![CDATA[dev]]></category>
+		<category><![CDATA[template]]></category>
+		<guid isPermaLink="false">https://www.patridgedev.com/?p=609</guid>
+
+					<description><![CDATA[Previously, I covered creating your first custom dotnet new template. Now, let&#8217;s work on customizing the content our template generates based on inputs provided via the command line. I’ll be working from the same custom template from that post, which is just a dotnet new console output with its own .template.config setup. If you want a starter template project to get you going, use the template from the 1-custom-template folder from the Git repo from that blog post. This is the second in a collection of posts about creating custom templates for the dotnet new system. Your first input parameter When you are generating content from a template, your first parameter for controlling things is built in to the SDK. There are two variables used to decide where to put the generated content: --output and --name. If you provide a path via --output "some/path", the content will be generated in that location. If, in your template&#8217;s template.json file, you set "preferNameDirectory": true, you can set the same path via --name "some/path". (If you have the preferNameDirectory variable set to true and provide both an output and name variable, it will use the output value.) Without either command-line parameter, the new... <a class="continue-reading-link" href="https://www.patridgedev.com/2018/10/22/add-variables-to-your-custom-dotnet-new-template/"> Continue reading <span class="meta-nav">&#8594; </span></a>]]></description>
+		
+					<wfw:commentRss>https://www.patridgedev.com/2018/10/22/add-variables-to-your-custom-dotnet-new-template/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Making a custom &#8216;dotnet new&#8217; template</title>
+		<link>https://www.patridgedev.com/2018/10/09/making-a-custom-dotnet-new-template/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=making-a-custom-dotnet-new-template</link>
+					<comments>https://www.patridgedev.com/2018/10/09/making-a-custom-dotnet-new-template/#respond</comments>
+		
+		<dc:creator><![CDATA[adam]]></dc:creator>
+		<pubDate>Tue, 09 Oct 2018 13:00:23 +0000</pubDate>
+				<category><![CDATA[dev]]></category>
+		<category><![CDATA[template]]></category>
+		<guid isPermaLink="false">https://www.patridgedev.com/?p=597</guid>
+
+					<description><![CDATA[Why make a template I am a bit biased these days, but once I spin up a folder structure and/or text document manually more than twice, I give some thought to templating it. If I need to keep making more of something, the time to get all the boilerplate content in place is time taken away from the good stuff I want to write. This is the first in a series of posts about creating custom templates for the dotnet new system. How to template There are lots of templating systems out there that can allow you to create content quickly. If you have used any of the ASP.NET generators, those use Yeoman to spin up new ASP.NET projects quickly. I&#8217;m not saying any template engine is better here, just showing what I&#8217;ve been using lately. I have been using the templating engine built into the .NET Core SDK, since it tends to be installed on all my development machines. The .NET Core template system is exposed through the dotnet new command-line program, where the dotnet program is able to do way more stuff like compiling code, managing NuGet packages, or running .NET Core applications. (Run dotnet --help to see... <a class="continue-reading-link" href="https://www.patridgedev.com/2018/10/09/making-a-custom-dotnet-new-template/"> Continue reading <span class="meta-nav">&#8594; </span></a>]]></description>
+		
+					<wfw:commentRss>https://www.patridgedev.com/2018/10/09/making-a-custom-dotnet-new-template/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>
